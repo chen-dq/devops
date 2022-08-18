@@ -24,7 +24,7 @@ spec:
             - name: MF_LORA_ADAPTER_LOG_LEVEL
               value: {{ default .Values.defaults.logLevel .Values.adapter_lora.logLevel }}
             - name: MF_BROKER_URL
-              value: nats://{{ .Release.Name }}-nats-client:{{ .Values.defaults.natsPort }}
+              value: {{ .Values.defaults.messageBrokerUrl }}
             - name: MF_LORA_ADAPTER_MESSAGES_URL
               value: {{ .Values.adapter_lora.messageUrl }}
             - name: MF_LORA_ADAPTER_ROUTE_MAP_URL

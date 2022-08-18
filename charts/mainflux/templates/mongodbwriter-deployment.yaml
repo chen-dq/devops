@@ -33,7 +33,7 @@ spec:
             - name: MF_MONGO_WRITER_LOG_LEVEL
               value: debug
             - name: MF_BROKER_URL
-              value: nats://{{ .Release.Name }}-nats-client:{{ .Values.defaults.natsPort }}
+              value: {{ .Values.defaults.messageBrokerUrl }}
             - name: MF_MONGO_WRITER_PORT
               value: "{{ .Values.mongodb.writer.httpPort }}"
             - name: MF_MONGO_WRITER_BATCH_SIZE

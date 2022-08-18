@@ -11,7 +11,7 @@ defaults:
       - {}
   # Replicas of MQTT adapter, NATS, Things, Envoy and Auth
   replicaCount: 3
-  natsPort: 4222
+  messageBrokerUrl: "nats://broker:4222"
   jaegerPort: 6831
 
 ingress:

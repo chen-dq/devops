@@ -32,7 +32,7 @@ spec:
             - name: MF_TWINS_CHANNEL_ID
               value: {{.Values.twins.channelId }}
             - name: MF_BROKER_URL
-              value: nats://{{ .Release.Name }}-nats-client:{{ .Values.defaults.natsPort }}
+              value: {{ .Values.defaults.messageBrokerUrl }}
             - name: MF_AUTH_GRPC_URL
               value: {{ .Release.Name }}-envoy:{{ .Values.auth.grpcPort }}
             - name: MF_TWINS_CACHE_URL
